@@ -1,16 +1,38 @@
-# React + Vite
+# Assessment 1: Rapid Replication (Trello List)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Reference Component
+* **Application:** Trello (Atlassian)
+* **Component:** "List" Interface & Card Composer
+* **Rationale:** Selected for its complex interaction model (hover states, focus management) and specific visual hierarchy. This component represents the core user action of the application.
 
-Currently, two official plugins are available:
+## 2. Tech Stack & Tools
+* **Core:** React (Vite)
+* **Styling:** Tailwind CSS (v3.4)
+* **Icons:** Lucide React
+* **Automation:** AI-Assisted Logic Generation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3. Features Implemented
+Beyond the visual replication, I implemented full **CRUD** functionality to demonstrate complete state management:
+* **Create:** Dynamic "Add a card" composer with auto-focus interactions.
+* **Read:** Pixel-perfect rendering of the list and card elements.
+* **Update:** Inline editing (click any card text to rename it).
+* **Delete:** Hover over a card to reveal the trash icon for deletion.
 
-## React Compiler
+## 4. Workflow Efficiency Report
+[cite_start]To meet the strict 3-4 hour timeframe[cite: 6], I utilized the following acceleration strategies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Atomic CSS Architecture:** By utilizing Tailwind CSS, I bypassed standard stylesheet creation. [cite_start]This allowed me to iterate on "Visual Fidelity" [cite: 25] in real-time, matching hex codes and spacing directly in the markup without context switching.
+* **AI-Augmented Logic:** I employed AI to scaffold the boilerplate for the CRUD state handlers (`handleAdd`, `handleDelete`, `handleEdit`). This reduced time spent on repetitive logic, allowing me to focus my efforts on refining micro-interactions and edge cases (like `Escape` to cancel).
+* [cite_start]**Component Isolation:** I built the solution as a single, self-contained module to ensure clean code structure [cite: 14] and rapid debugging.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 5. Setup & Run
+1.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+2.  **Start Development Server:**
+    ```bash
+    npm run dev
+    ```
+3.  **View Project:**
+    Open `http://localhost:5173` in your browser.
