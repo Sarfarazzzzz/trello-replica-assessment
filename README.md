@@ -1,4 +1,4 @@
-# Assessment 1: Rapid Replication (Trello List)
+# Assessment : Rapid Replication (Trello List)
 
 ## 1. Reference Component
 * **Application:** Trello (Atlassian)
@@ -35,4 +35,4 @@ Beyond the visual replication, I implemented full **CRUD** functionality to demo
     npm run dev
     ```
 3.  **View Project:**
-    Open `http://localhost:5173` in your browser.
+    Open `http://localhost:####` in your browser.
