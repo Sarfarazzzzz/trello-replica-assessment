@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MoreHorizontal, Plus, X, Pencil, Trash2 } from 'lucide-react';
 
-// Replicating Trello's exact visual style
+
 const STYLES = {
   listContainer: "w-[272px] bg-[#f1f2f4] rounded-xl shadow-sm flex flex-col max-h-full mx-auto mt-10 text-[#172b4d]",
   header: "px-3 py-3 flex justify-between items-center cursor-pointer",
   headerTitle: "font-semibold text-sm px-2 py-1 w-full border border-transparent focus:bg-white focus:border-[#388bff] focus:inset focus:outline-none rounded-[3px] transition-colors",
   cardList: "px-2 flex flex-col gap-2 overflow-y-auto min-h-[2px]",
-  // Updated card style to handle hover actions better
+  
   card: "bg-white p-2 rounded-lg shadow-sm border border-transparent hover:border-[#388bff] group relative text-sm cursor-pointer hover:bg-[#f8f9fa] text-slate-700 min-h-[36px]",
-  cardContent: "leading-snug break-words pr-6", // Added padding right so text doesn't overlap icons
+  cardContent: "leading-snug break-words pr-6", 
   iconGroup: "absolute top-1 right-1 opacity-0 group-hover:opacity-100 flex gap-1 bg-white/80 p-0.5 rounded",
   iconButton: "p-1 hover:bg-[#ebecf0] rounded text-slate-500 hover:text-slate-700 transition-colors",
   composerContainer: "p-2",
@@ -29,36 +29,34 @@ const MockData = [
 export default function App() {
   const [cards, setCards] = useState(MockData);
 
-  // State for adding new cards
+  
   const [isComposing, setIsComposing] = useState(false);
   const [newCardTitle, setNewCardTitle] = useState("");
 
-  // State for editing existing cards
+  
   const [editingId, setEditingId] = useState(null);
   const [editTitle, setEditTitle] = useState("");
 
   const [listTitle, setListTitle] = useState("To Do");
 
-  // Refs for auto-focus
+ 
   const composerRef = useRef(null);
   const editRef = useRef(null);
 
-  // Focus input when composing starts
+  
   useEffect(() => {
     if (isComposing && composerRef.current) {
       composerRef.current.focus();
     }
   }, [isComposing]);
 
-  // Focus edit input when editing starts
+  
   useEffect(() => {
     if (editingId && editRef.current) {
       editRef.current.focus();
-      editRef.current.select(); // Select all text for easy replacement
+      editRef.current.select(); 
     }
   }, [editingId]);
-
-  // --- ACTIONS ---
 
   const handleAddCard = () => {
     if (!newCardTitle.trim()) return;
@@ -82,7 +80,7 @@ export default function App() {
 
   const saveEdit = () => {
     if (!editTitle.trim()) {
-      // If empty, maybe delete? For now just cancel edit.
+      
       setEditingId(null);
       return;
     }
