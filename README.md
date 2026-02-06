@@ -19,11 +19,11 @@ Beyond the visual replication, I implemented full **CRUD** functionality to demo
 * **Delete:** Hover over a card to reveal the trash icon for deletion.
 
 ## 4. Workflow Efficiency Report
-[cite_start]To meet the strict 3-4 hour timeframe[cite: 6], I utilized the following acceleration strategies:
+To meet the strict 3-4 hour timeframe, I utilized the following acceleration strategies:
 
-* **Atomic CSS Architecture:** By utilizing Tailwind CSS, I bypassed standard stylesheet creation. [cite_start]This allowed me to iterate on "Visual Fidelity" [cite: 25] in real-time, matching hex codes and spacing directly in the markup without context switching.
+* **Atomic CSS Architecture:** By utilizing Tailwind CSS, I bypassed standard stylesheet creation. This allowed me to iterate on "Visual Fidelity" in real-time, matching hex codes and spacing directly in the markup without context switching.
 * **AI-Augmented Logic:** I employed AI to scaffold the boilerplate for the CRUD state handlers (`handleAdd`, `handleDelete`, `handleEdit`). This reduced time spent on repetitive logic, allowing me to focus my efforts on refining micro-interactions and edge cases (like `Escape` to cancel).
-* [cite_start]**Component Isolation:** I built the solution as a single, self-contained module to ensure clean code structure [cite: 14] and rapid debugging.
+**Component Isolation:** I built the solution as a single, self-contained module to ensure clean code structure and rapid debugging.
 
 ## 5. Setup & Run
 1.  **Install Dependencies:**
